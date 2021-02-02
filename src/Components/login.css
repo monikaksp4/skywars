@@ -82,6 +82,7 @@ html {
   /* FORM TYPOGRAPHY*/
   
   input[type=button], input[type=submit], input[type=reset]  {
+    cursor: pointer;
     background-color: #56baed;
     border: none;
     color: white;
@@ -300,4 +301,5 @@ html {
 }
 th,td{
   padding: 10px;
+  /* font-size: 20px; */
 }

@@ -7,9 +7,11 @@ const Search = () => {
   const history = useHistory();
   const [planet, setPlanet] = useState("");
   const [search, setSearch] = useState("");
+  const [loader,setLoader]=useState(true)
   useEffect(() => {
     axios.get("https://swapi.dev/api/planets/").then(res => {
       setPlanet(res.data.results)
+      // setLoader(false)
     })
   }, [])
   const handleSearch = (e) => {
@@ -41,9 +43,13 @@ const Search = () => {
     <div className="search">
       Search Here  <input type="text" value={search} onChange={handleSearch} />
     </div>
+    
+    
     <ErrorBoundary >
       <Planets name={dispResult()} />
-    </ErrorBoundary>
+      </ErrorBoundary>
+  
+ 
   </>
 }
 export default Search;
