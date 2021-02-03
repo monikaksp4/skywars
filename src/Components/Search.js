@@ -18,7 +18,7 @@ const Search = () => {
     setSearch(e.target.value)
   }
   const dispResult = () => {
-    let filtered = {}
+    let filtered = []
     if (planet) {
       planet.filter(p => p.name === search)
       filtered = planet.filter(entry => entry.name.toLowerCase().includes(search.toLowerCase())
